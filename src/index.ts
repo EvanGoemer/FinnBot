@@ -27,3 +27,4 @@ client.on("interactionCreate", async (interaction) => {
 });
 
 client.login(config.DISCORD_TOKEN);
+deployCommands({ guildId: "1246145258849304717" })
