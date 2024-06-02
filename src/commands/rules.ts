@@ -7,7 +7,7 @@ const ruleList = (() => {
 	let currLineIdx = 0;
 	let currRule = "";
 	while (currLineIdx < lines.length-1){
-		currRule = currRule.concat(lines[currLineIdx])
+		currRule = currRule.concat(lines[currLineIdx], "\n")
 		if(!isNaN(Number(lines[currLineIdx + 1][0]))){
 			rules.push(currRule)
 			currRule = ""
