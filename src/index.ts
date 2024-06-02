@@ -35,6 +35,7 @@ client.on("interactionCreate", async (interaction) => {
 
 process.on('SIGINT', function() {
   banWordFilter.cleanup();
+  process.exit()
 });
 
 client.login(config.DISCORD_TOKEN);

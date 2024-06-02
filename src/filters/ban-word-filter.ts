@@ -11,6 +11,14 @@ export function addWord(word : string){
   bannedList.push(word);
   return true;
 }
+
+export function removeWord(word : string){
+  if(!bannedList.includes(word))
+    return false;
+  let index = bannedList.indexOf(word);
+  bannedList = bannedList.filter((e : string, i : number) => i !== index)
+  return true;
+}
 export async function execute(message: Message) {
     let messageText = message.content.toLowerCase();
     let saidBannedWord = false;
@@ -21,11 +29,11 @@ export async function execute(message: Message) {
     }
     console.log(saidBannedWord);
 }
-export async function cleanup() {
+export function cleanup() {
   let bannedWordText = "";
   for(let i = 0;i<bannedList.length;i++){
     bannedWordText = bannedWordText.concat(bannedList[i], "\n")
   }
-  await fs.writeFileSync('banned_words.txt', bannedWordText);
+  fs.writeFileSync('banned_words.txt', bannedWordText);
   console.log("Banned words saved!")
 }
