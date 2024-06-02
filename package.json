@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "main": "./src/index.js",
   "scripts": {
-<<<<<<< HEAD
-    "lint": "eslint . --fix"
-=======
->>>>>>> 794f6d2 (Removes eslint. added update bot command. ignore .js files in vsc)
   },
   "author": "Evan Goemer",
   "license": "ISC",
@@ -16,9 +12,5 @@
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "eslint": "^9.4.0"
-=======
->>>>>>> 794f6d2 (Removes eslint. added update bot command. ignore .js files in vsc)
   }
 }
