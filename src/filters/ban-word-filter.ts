@@ -38,8 +38,8 @@ export async function execute(message: Message) {
         channel.send({ content: `${message.author}'s message was deleted for containing a blacklisted word\nMessage for context: "${message.content}"`})
       }
       await message.delete()
+      break;
     }
-    break;
   }
 }
 export function cleanup() {
