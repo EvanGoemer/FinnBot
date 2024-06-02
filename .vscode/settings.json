@@ -1,5 +1,6 @@
 {
     "files.exclude": {
         "**/*.js": true
-    }
+    },
+    "files.autoSave": "afterDelay"
 }
